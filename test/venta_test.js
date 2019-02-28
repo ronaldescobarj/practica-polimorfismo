@@ -12,4 +12,11 @@ describe('Venta', function () {
         expect(venta.total()).equal(0);
     })
 
+    it('Total agregando un articulo deberia devolver el precio del producto', function () {
+        let venta = new Venta();
+        let pantalla = new Articulo("Mouse Razer", 150);
+        venta.agregarProducto(pantalla, 1)
+        expect(venta.total()).equal(150)
+    })
+
 });
