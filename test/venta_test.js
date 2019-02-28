@@ -1,9 +1,9 @@
 var expect = require('chai').expect;
 
-import Venta from '../Venta.js';
-import Servicio from '../Servicio.js';
-import Articulo from '../Articulo.js';
-import Producto from '../Producto.js';
+import Venta from '../src/Venta.js';
+import Servicio from '../src/Servicio.js';
+import Articulo from '../src/Articulo.js';
+import Producto from '../src/Producto.js';
 
 describe('Venta', function () {
 
