@@ -26,4 +26,18 @@ describe('Venta', function () {
         expect(venta.total()).equal(300)
     })
 
+    it('Total agregando una unidad de un servicio deberia devolver el precio del servicio', function () {
+        let venta = new Venta();
+        let limpieza = new Servicio("Limpieza", 60);
+        venta.agregarProducto(limpieza);
+        expect(venta.total()).equal(60)
+    })
+
+    it('Total agregando tres unidades de un servicio deberia devolver el precio del servicio*3', function () {
+        let venta = new Venta();
+        let limpieza = new Servicio("Limpieza", 60);
+        venta.agregarProducto(limpieza, 3);
+        expect(venta.total()).equal(180)
+    })
+
 });
