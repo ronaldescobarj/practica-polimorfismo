@@ -40,4 +40,13 @@ describe('Venta', function () {
         expect(venta.total()).equal(180)
     })
 
+    it('Total agregando tres unidades de un articulo y dos de un servicio deberia devolver el monto total correspondiente', function () {
+        let venta = new Venta();
+        let mouse = new Articulo("Mouse Razer", 150);
+        let limpieza = new Servicio("Limpieza", 60);
+        venta.agregarProducto(mouse, 2);
+        venta.agregarProducto(limpieza, 3);
+        expect(venta.total()).equal(480)
+    })
+
 });
