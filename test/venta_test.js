@@ -12,10 +12,10 @@ describe('Venta', function () {
         expect(venta.total()).equal(0);
     })
 
-    it('Total agregando un articulo deberia devolver el precio del producto', function () {
+    it('Total agregando una unidad de un articulo deberia devolver el precio del articulo', function () {
         let venta = new Venta();
-        let pantalla = new Articulo("Mouse Razer", 150);
-        venta.agregarProducto(pantalla, 1)
+        let mouse = new Articulo("Mouse Razer", 150);
+        venta.agregarProducto(mouse);
         expect(venta.total()).equal(150)
     })
 

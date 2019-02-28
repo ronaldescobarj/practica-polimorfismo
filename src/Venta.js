@@ -5,7 +5,15 @@ class Venta {
     }
 
     total() {
-        return 0;
+        if (this.productos.length > 0)
+            return this.productos[0].cuantoPor();
+        else
+            return 0;
+    }
+
+    agregarProducto(producto) {
+        this.productos.push(producto);
+        console.log(this.productos);
     }
 }
 
